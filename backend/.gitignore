@@ -3,3 +3,6 @@ coverage
 .vscode
 .env
 src/database/database.sqlite
+
+uploads/*
+!uploads/.gitkeep

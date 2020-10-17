@@ -5,10 +5,10 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
 import mapMarkerImg from '../images/map-marker.svg';
 
-import '../styles/pages/orphanages-map.css';
+import api from '../services/api';
 import mapIcon from '../utils/mapIcon';
 
-import api from '../services/api';
+import '../styles/pages/orphanages-map.css';
 
 interface Orphanage {
   id: number;
@@ -22,7 +22,6 @@ function OrphanagesMap() {
 
   useEffect(() => {
     api.get('orphanages').then(response => {
-      console.log(response.data);
       setOrphanages(response.data);
     });
   }, []);
